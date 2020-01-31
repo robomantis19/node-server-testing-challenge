@@ -54,7 +54,7 @@ exports.seed = function(knex) {
          {"count": "47", "City": "Philadelphia", "State": "PA", "Attend": "4,494", "Church": "Sharon Baptist Church*"}, 
          {"count": "48", "City": "Tulsa", "State": "OK", "Attend": "4,318", "Church": "The Church at DuPage"}, 
          {"count": "49", "City": "New Orleans", "State": "LA", "Attend": "4,200", "Church": "Franklin Avenue Baptist Church"}, 
-         {"count": "50", "City": "Little Rock", "State": "AR", "Attend": "4,100", "Church": "The Church at Rock Creek"}, 
+         {"count": "50", "City": "Little Rock", "State": "AR", "Attend": "4,100", "Church": "The Church at Rock Creek"} 
         ]);
     });
 };
