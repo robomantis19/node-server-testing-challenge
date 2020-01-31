@@ -4,7 +4,7 @@
   "description": "Node Server Testing Challenge",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "knex migrate:latest --env production && knex seed:run --env production && nodemon index.js",
     "test": "jest --watch"
   },
   "jest": {
