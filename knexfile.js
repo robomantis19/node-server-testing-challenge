@@ -1,5 +1,6 @@
 // Update with your config settings.
 const localPg = {
+      filename: './churchs.db3',
       host:'localhost', 
       port: 5432,
       user:     'postgres',
@@ -20,9 +21,15 @@ module.exports = {
       filename: './churchs.db3',
       host:'localhost', 
       port: 5432,
-      database: 'daisvbqi23fhu',
-      user:     'lspvolwvgmftbz',
-      password: '3fb3a77727bedf74e3d530b2e02721b5dae873187851c1a8dfd93ef88ce0cd3f'
+      database: 'churchs',
+      user:     'postgres',
+      password: 'postgres'
+    }
+  },
+  testing: {
+    client: 'pg',
+    connection: {
+      filename: './test.db3',
     }
   },
 
@@ -31,9 +38,9 @@ module.exports = {
     connection: {
       host:'localhost', 
       port: 5432,
-      database: 'daisvbqi23fhu',
-      user:     'lspvolwvgmftbz',
-      password: '3fb3a77727bedf74e3d530b2e02721b5dae873187851c1a8dfd93ef88ce0cd3f'
+      database: 'churchs',
+      user:     'postgres',
+      password: 'postgres'
     },
     pool: {
       min: 2,
@@ -46,7 +53,7 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: prodConnection,
+    connection: localPg,
     pool: {
       min: 2,
       max: 10
