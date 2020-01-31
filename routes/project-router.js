@@ -14,6 +14,7 @@ router.get('/churchs', (req, res) => {
 router.post('/set', (req, res) => { 
     console.log('router req', req.body)
     Input.add(req.body)
+    
     .then(input => { 
         console.log('router churchs', input)
         res.status(201).json(input);

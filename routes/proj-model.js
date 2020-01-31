@@ -1,4 +1,4 @@
-const db = require('../seeds/db.config.js')
+const db = require('../db.config.js')
 
 module.exports = {
     find, 
@@ -15,7 +15,7 @@ function add(item){
     console.log('model item', item)
     return db('SBCs')
     .insert(count, City, State, Attend, Church)
-    .then((ids) => { 
+    .then(([ids]) => { 
         // const [ id ] = ids
         // console.log('id', id); 
         return findById(ids)
@@ -25,6 +25,6 @@ function add(item){
 function findById(id){
     return db('SBCs')
     .select('count', 'City', 'State', 'Attend', 'Church')
-    .where(id)
+    .where('count', id)
     .first()
 }
