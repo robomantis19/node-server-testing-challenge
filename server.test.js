@@ -10,7 +10,7 @@ describe('server', function() {
     describe('GET /', function() {
         it('should return 200 OK', function() {
             // make a GET request to /
-            return request(server).get('/churchs')
+            return request(server).get('/')
                 .then(res => {
                 // check that the status code is 200
                 expect(res.status).toBe(200);
@@ -22,6 +22,7 @@ describe('server', function() {
             return request(server).get('/churchs')
                 .then(res => {
                 // check that the status code is 200
+                console.log('response type:', res.type)
                 expect(res.type).toMatch(/json/i)
             })
         })

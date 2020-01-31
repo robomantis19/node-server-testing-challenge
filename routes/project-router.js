@@ -5,6 +5,16 @@ const Input = require('./proj-model');
 
 const router = express.Router(); 
 
+router.get('/', (req, res) => { 
+    if(res){
+        res.status(200).json({message:'server starting'});
+
+    }else{
+        res.status(500).json({errorMessage: 'route not working'})
+    }
+        
+
+})
 router.get('/churchs', (req, res) => { 
     Input.find()
     .then(churchs => { 
