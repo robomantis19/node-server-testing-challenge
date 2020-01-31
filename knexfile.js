@@ -20,9 +20,9 @@ module.exports = {
       filename: './churchs.db3',
       host:'localhost', 
       port: 5432,
-      database: 'churchs',
-      user:     'postgres',
-      password: 'postgres'
+      database: 'daisvbqi23fhu',
+      user:     'lspvolwvgmftbz',
+      password: '3fb3a77727bedf74e3d530b2e02721b5dae873187851c1a8dfd93ef88ce0cd3f'
     }
   },
 
@@ -31,9 +31,9 @@ module.exports = {
     connection: {
       host:'localhost', 
       port: 5432,
-      database: 'churchs',
-      user:     'postgres',
-      password: 'postgres'
+      database: 'daisvbqi23fhu',
+      user:     'lspvolwvgmftbz',
+      password: '3fb3a77727bedf74e3d530b2e02721b5dae873187851c1a8dfd93ef88ce0cd3f'
     },
     pool: {
       min: 2,
