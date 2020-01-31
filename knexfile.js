@@ -6,9 +6,10 @@ const localPg = {
       password: 'postgres',
       database: 'churchs'
 }
-const pgUser = process.env.PG_USER || 'postgres'; 
-const pgDb = process.env.PG_DB || 'churchs';
-const prodConnection = `postgres://${pgUser}@localhost/${pgDb}`;
+const pgUser = process.env.PGUSER || 'postgres'; 
+const pgDb = process.env.PGDATABASE || 'churchs';
+const PgPass = process.env.PGPASSWORD || 'postgres';
+const prodConnection = `postgres://${pgUser}:${PgPass}@localhost/${pgDb}`;
 
 module.exports = {
 
@@ -16,6 +17,7 @@ module.exports = {
     client: 'pg',
     useNullAsDefault : true, 
     connection: {
+      filename: './churchs.db3',
       host:'localhost', 
       port: 5432,
       database: 'churchs',
