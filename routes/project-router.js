@@ -11,7 +11,7 @@ router.get('/churchs', (req, res) => {
         res.status(200).json({churchs});
     })
     .catch(err => { 
-        console.log('get request error': err)
+        console.log('get request error: ',err)
         res.status(500).json({message: "error in get request: ", error: err})
     })
 })
