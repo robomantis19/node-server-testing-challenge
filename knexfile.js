@@ -6,9 +6,9 @@ const localPg = {
       password: 'postgres',
       database: 'churchs'
 }
-const pgUser = process.env.PGUSER || 'postgres'; 
-const pgDb = process.env.DATABASE_URL || 'churchs';
-const PgPass = process.env.PASSWORD || 'postgres';
+const pgUser = process.env.PGUSER || 'lspvolwvgmftbz'; 
+const pgDb = process.env.DATABASE_URL || 'daisvbqi23fhu';
+const PgPass = process.env.PASSWORD || '3fb3a77727bedf74e3d530b2e02721b5dae873187851c1a8dfd93ef88ce0cd3f';
 const prodConnection = `postgres://${pgUser}@ec2-54-174-229-152.compute-1.amazonaws.com:5432/${pgDb}`;
 
 module.exports = {
