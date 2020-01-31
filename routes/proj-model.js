@@ -14,17 +14,17 @@ function add(item){
     const {count, City, State, Attend, Church} = item
     console.log('model item', item)
     return db('SBCs')
-    .insert(count, City, State, Attend, Church)
-    .then(([ids]) => { 
-        // const [ id ] = ids
-        // console.log('id', id); 
-        return findById(ids)
-    });
+    .insert(item).returning('id')
+    // .then(([id]) => { 
+    //     // const [ id ] = ids
+    //     // console.log('id', id); 
+    //     return findById(id)
+    // });
 }
 
 function findById(id){
     return db('SBCs')
-    .select('count', 'City', 'State', 'Attend', 'Church')
-    .where('count', id)
+    .select('id', 'count', 'City', 'State', 'Attend', 'Church')
+    .where('id', id)
     .first()
 }

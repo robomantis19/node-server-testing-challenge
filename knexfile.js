@@ -1,12 +1,21 @@
 // Update with your config settings.
+const localPg = {
+      host:'localhost', 
+      port: 5432,
+      user:     'postgres',
+      password: 'postgres',
+      database: 'churchs'
+}
+const pgUser = process.env.PG_USER || 'postgres'; 
+const pgDb = process.env.PG_DB || 'churchs';
+const prodConnection = `postgres://${pgUser}@localhost/${pgDb}`;
 
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     useNullAsDefault : true, 
     connection: {
-      filename: './dev.sqlite3',
       host:'localhost', 
       port: 5432,
       database: 'churchs',
@@ -16,7 +25,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       host:'localhost', 
       port: 5432,
@@ -34,14 +43,8 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
-    connection: {
-      host:'localhost', 
-      port: 5432,
-      user:     'postgres',
-      password: 'postgres',
-      database: 'churchs',
-    },
+    client: 'pg',
+    connection: prodConnection,
     pool: {
       min: 2,
       max: 10
